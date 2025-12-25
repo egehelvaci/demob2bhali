@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run build:*)",
+      "Bash(git add:*)",
+      "Bash(git push:*)",
+      "Bash(sed:*)",
+      "Bash(npx tsc:*)",
+      "Bash(npx next build:*)",
+      "Bash(git checkout:*)",
+      "Read(/C:\\c\\Users\\ege_h/**)",
+      "Read(/C:\\c\\Users\\ege_h/**)",
+      "Read(/C:\\c\\Users\\ege_h/**)",
+      "Read(/C:\\c\\Users\\ege_h/**)",
+      "Read(/C:\\c\\Users\\ege_h/**)",
+      "Bash(git commit:*)",
+      "WebFetch(domain:)",
+      "Bash(npm run dev:*)",
+      "Read(c:\\Users\\ege_h\\OneDrive\\Masaüstü\\ekran/**)",
+      "Read(c:\\Users\\ege_h\\OneDrive\\Masaüstü\\ekran/**)"
+    ],
+    "deny": [],
+    "ask": [],
+    "defaultMode": "acceptEdits",
+    "additionalDirectories": [
+      "C:\\c\\Users\\ege_h"
+    ]
+  }
+}
