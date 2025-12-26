@@ -115,7 +115,7 @@ export default function AddStorePage() {
     setLoading(true);
     try {
       // Admin API endpoint'ini kullan
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://pashahomeapps.up.railway.app'}/api/admin/stores`, {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://expressjs-postgres-production-6aba.up.railway.app'}/api/admin/stores`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

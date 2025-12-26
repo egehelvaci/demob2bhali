@@ -475,7 +475,7 @@ export default function Settings() {
     
     setLoading(true);
     try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://pashahomeapps.up.railway.app'}/api/admin/users`, {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://expressjs-postgres-production-6aba.up.railway.app'}/api/admin/users`, {
         headers: {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${token}`
@@ -505,7 +505,7 @@ export default function Settings() {
 
   const handleUserClick = async (userId: string) => {
     try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://pashahomeapps.up.railway.app'}/api/admin/users/${userId}`, {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://expressjs-postgres-production-6aba.up.railway.app'}/api/admin/users/${userId}`, {
         headers: {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${token}`
@@ -524,7 +524,7 @@ export default function Settings() {
     if (!deleteUserId) return;
     
     try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://pashahomeapps.up.railway.app'}/api/admin/users/${deleteUserId}`, {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://expressjs-postgres-production-6aba.up.railway.app'}/api/admin/users/${deleteUserId}`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',
@@ -546,8 +546,8 @@ export default function Settings() {
     e.preventDefault();
     try {
       const url = selectedUser 
-        ? `${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://pashahomeapps.up.railway.app'}/api/admin/users/${selectedUser.userId}`
-        : `${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://pashahomeapps.up.railway.app'}/api/admin/users`;
+        ? `${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://expressjs-postgres-production-6aba.up.railway.app'}/api/admin/users/${selectedUser.userId}`
+        : `${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://expressjs-postgres-production-6aba.up.railway.app'}/api/admin/users`;
       
       const method = selectedUser ? 'PUT' : 'POST';
       

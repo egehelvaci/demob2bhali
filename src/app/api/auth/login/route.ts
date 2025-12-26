@@ -7,7 +7,7 @@ export async function POST(request: Request) {
 
 
     // Gerçek API'ye istek gönder
-    const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://pashahomeapps.up.railway.app'}/api/auth/login`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://expressjs-postgres-production-6aba.up.railway.app'}/api/auth/login`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

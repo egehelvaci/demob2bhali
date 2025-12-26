@@ -110,7 +110,7 @@ export default function TeslimatPage() {
     setSuccess('');
     
     try {
-      const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || 'https://pashahomeapps.up.railway.app';
+      const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || 'https://expressjs-postgres-production-6aba.up.railway.app';
       
       const response = await fetch(`${API_BASE_URL}/api/admin/barcode/scan`, {
         method: 'POST',
@@ -308,7 +308,7 @@ export default function TeslimatPage() {
     setShowResults(false);
     
     try {
-      const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || 'https://pashahomeapps.up.railway.app';
+      const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || 'https://expressjs-postgres-production-6aba.up.railway.app';
       
       const response = await fetch(`${API_BASE_URL}/api/admin/barcode/scan-multiple`, {
         method: 'POST',

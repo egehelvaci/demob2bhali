@@ -6,7 +6,7 @@ import { useAuth } from '@/app/context/AuthContext';
 import { useCart } from '@/app/context/CartContext';
 
 // API Base URL
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || "https://pashahomeapps.up.railway.app";
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || "https://expressjs-postgres-production-6aba.up.railway.app";
 
 // Token'ı localStorage veya sessionStorage'dan al
 function getAuthToken(): string | null {

@@ -128,7 +128,7 @@ const PrintCatalogPage = () => {
     try {
       const authToken = token;
       
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://pashahomeapps.up.railway.app'}/api/products/by-ids`, {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://expressjs-postgres-production-6aba.up.railway.app'}/api/products/by-ids`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -167,7 +167,7 @@ const PrintCatalogPage = () => {
         page: '1'
       });
       
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://pashahomeapps.up.railway.app'}/api/products?${params}`, {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://expressjs-postgres-production-6aba.up.railway.app'}/api/products?${params}`, {
         headers: {
           'Authorization': `Bearer ${authToken}`,
           'Content-Type': 'application/json'

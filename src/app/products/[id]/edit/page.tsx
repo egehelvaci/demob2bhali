@@ -36,7 +36,7 @@ export default function EditProduct() {
           return;
         }
         
-        const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://pashahomeapps.up.railway.app'}/api/products/${params.id}`, {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://expressjs-postgres-production-6aba.up.railway.app'}/api/products/${params.id}`, {
           headers: {
             'Authorization': `Bearer ${token}`,
           },
@@ -80,7 +80,7 @@ export default function EditProduct() {
         return;
       }
       
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://pashahomeapps.up.railway.app'}/api/products/${params.id}`, {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://expressjs-postgres-production-6aba.up.railway.app'}/api/products/${params.id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

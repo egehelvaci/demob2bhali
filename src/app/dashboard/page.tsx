@@ -186,7 +186,7 @@ export default function Dashboard() {
     const fetchCollections = async () => {
       setIsLoadingCollections(true);
       try {
-        const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://pashahomeapps.up.railway.app'}/api/collections`, {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://expressjs-postgres-production-6aba.up.railway.app'}/api/collections`, {
           headers: {
             'Authorization': `Bearer ${token}`
           }
@@ -211,7 +211,7 @@ export default function Dashboard() {
     const fetchRecentProducts = async () => {
       setIsLoadingProducts(true);
       try {
-        const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://pashahomeapps.up.railway.app'}/api/products?limit=20&page=1`, {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://expressjs-postgres-production-6aba.up.railway.app'}/api/products?limit=20&page=1`, {
           headers: {
             'Authorization': `Bearer ${token}`
           }
@@ -551,7 +551,7 @@ function ProductDetailModal({ open, onClose, productId }: { open: boolean, onClo
     setLoading(true);
     setError("");
     try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://pashahomeapps.up.railway.app'}/api/products/${id}`, {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://expressjs-postgres-production-6aba.up.railway.app'}/api/products/${id}`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }

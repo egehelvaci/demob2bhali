@@ -498,10 +498,10 @@ const Siparisler = () => {
 
       // Admin veya Editör ise sadece admin/orders endpoint'ini kullan, my-orders asla kullanma
       if (isAdminOrEditor) {
-        endpoint = `${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://pashahomeapps.up.railway.app'}/api/admin/orders?${queryParams.toString()}`;
+        endpoint = `${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://expressjs-postgres-production-6aba.up.railway.app'}/api/admin/orders?${queryParams.toString()}`;
       } else {
         // Admin değilse my-orders endpoint'ini kullan - kesinlikle admin endpoint kullanma
-                  endpoint = `${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://pashahomeapps.up.railway.app'}/api/orders/my-orders?${queryParams.toString()}`;
+                  endpoint = `${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://expressjs-postgres-production-6aba.up.railway.app'}/api/orders/my-orders?${queryParams.toString()}`;
         
         // Güvenlik kontrolü: Admin olmayan kullanıcılar asla admin endpoint'i kullanmamalı
         if (endpoint.includes('/admin/')) {
@@ -568,7 +568,7 @@ const Siparisler = () => {
         return;
       }
 
-      const endpoint = `${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://pashahomeapps.up.railway.app'}/api/admin/orders`;
+      const endpoint = `${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://expressjs-postgres-production-6aba.up.railway.app'}/api/admin/orders`;
       
       const response = await fetch(endpoint, {
         headers: {
@@ -717,7 +717,7 @@ const Siparisler = () => {
         try {
           // 1. Siparişi onayla
           const authToken = token;
-          const statusResponse = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://pashahomeapps.up.railway.app'}/api/admin/orders/${orderId}/status`, {
+          const statusResponse = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://expressjs-postgres-production-6aba.up.railway.app'}/api/admin/orders/${orderId}/status`, {
             method: 'PUT',
             headers: {
               'Authorization': `Bearer ${authToken}`,
@@ -735,7 +735,7 @@ const Siparisler = () => {
           if (statusData.success) {
             // 2. QR kodlarını oluştur
             try {
-              const qrResponse = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://pashahomeapps.up.railway.app'}/api/admin/orders/${orderId}/generate-qr-images`, {
+              const qrResponse = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://expressjs-postgres-production-6aba.up.railway.app'}/api/admin/orders/${orderId}/generate-qr-images`, {
                 method: 'POST',
                 headers: {
                   'Authorization': `Bearer ${authToken}`,
@@ -804,11 +804,11 @@ const Siparisler = () => {
       
       // Admin veya Editor ise admin/orders endpoint'ini kullan
       if (isAdminOrEditor) {
-                  endpoint = `${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://pashahomeapps.up.railway.app'}/api/admin/orders/${orderId}`;
+                  endpoint = `${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://expressjs-postgres-production-6aba.up.railway.app'}/api/admin/orders/${orderId}`;
 
       } else {
         // Admin/Editor değilse normal orders endpoint'ini kullan
-                  endpoint = `${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://pashahomeapps.up.railway.app'}/api/orders/${orderId}`;
+                  endpoint = `${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://expressjs-postgres-production-6aba.up.railway.app'}/api/orders/${orderId}`;
 
         
         // Güvenlik kontrolü: Admin/Editor olmayan kullanıcılar asla admin endpoint'i kullanmamalı
@@ -844,7 +844,7 @@ const Siparisler = () => {
   const generateQRCodes = async (orderId: string) => {
     try {
       const authToken = token;
-              const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://pashahomeapps.up.railway.app'}/api/admin/orders/${orderId}/generate-qr-images`, {
+              const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://expressjs-postgres-production-6aba.up.railway.app'}/api/admin/orders/${orderId}/generate-qr-images`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${authToken}`,
@@ -1369,7 +1369,7 @@ const Siparisler = () => {
       for (const orderId of orderIds) {
         try {
           const authToken = token;
-          const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://pashahomeapps.up.railway.app'}/api/admin/orders/${orderId}`, {
+          const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://expressjs-postgres-production-6aba.up.railway.app'}/api/admin/orders/${orderId}`, {
             headers: {
               'Authorization': `Bearer ${authToken}`,
               'Content-Type': 'application/json'
@@ -2042,7 +2042,7 @@ const Siparisler = () => {
       const authToken = token;
       
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://pashahomeapps.up.railway.app'}/api/orders/${orderId}/cancel`,
+        `${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://expressjs-postgres-production-6aba.up.railway.app'}/api/orders/${orderId}/cancel`,
         {
           method: 'PUT',
           headers: {
@@ -2166,7 +2166,7 @@ const Siparisler = () => {
       const authToken = token;
       
       // İlk olarak sipariş durumunu güncelle
-              const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://pashahomeapps.up.railway.app'}/api/admin/orders/${orderId}/status`, {
+              const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://expressjs-postgres-production-6aba.up.railway.app'}/api/admin/orders/${orderId}/status`, {
         method: 'PUT',
         headers: {
           'Authorization': `Bearer ${authToken}`,
@@ -2250,7 +2250,7 @@ const Siparisler = () => {
     try {
       const authToken = token;
       // Hem admin hem kullanıcı için aynı endpoint
-      const endpoint = `${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://pashahomeapps.up.railway.app'}/api/orders/${orderId}/receipt`;
+      const endpoint = `${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://expressjs-postgres-production-6aba.up.railway.app'}/api/orders/${orderId}/receipt`;
 
       const response = await fetch(endpoint, {
         headers: {
@@ -2279,7 +2279,7 @@ const Siparisler = () => {
   const markReceiptAsPrinted = async (orderId: string): Promise<void> => {
     try {
       const authToken = token;
-      const endpoint = `${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://pashahomeapps.up.railway.app'}/api/orders/${orderId}/mark-printed`;
+      const endpoint = `${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://expressjs-postgres-production-6aba.up.railway.app'}/api/orders/${orderId}/mark-printed`;
 
       const response = await fetch(endpoint, {
         method: 'PUT',

@@ -10,7 +10,7 @@ import { getProductRules, ProductRule } from '@/services/api';
 import { useToken } from '@/app/hooks/useToken';
 
 // API Base URL
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || "https://pashahomeapps.up.railway.app";
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || "https://expressjs-postgres-production-6aba.up.railway.app";
 
 // Sayfalama Komponenti
 const Pagination = ({ pagination, onPageChange, searchTerm = '', collectionId = '' }: {
@@ -378,7 +378,7 @@ export default function ProductList() {
   const fetchCollections = async () => {
     try {
       const authToken = token;
-              const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://pashahomeapps.up.railway.app'}/api/collections/`, {
+              const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://expressjs-postgres-production-6aba.up.railway.app'}/api/collections/`, {
         headers: {
           'Authorization': `Bearer ${authToken}`
         }
@@ -419,7 +419,7 @@ export default function ProductList() {
     setDeleteError("");
     try {
       const authToken = token;
-              const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://pashahomeapps.up.railway.app'}/api/products/${deleteId}`, {
+              const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://expressjs-postgres-production-6aba.up.railway.app'}/api/products/${deleteId}`, {
         method: "DELETE",
         headers: {
           'Authorization': `Bearer ${authToken}`
@@ -561,7 +561,7 @@ export default function ProductList() {
           fd.append('productImage', form.productImage);
         }
         
-        const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://pashahomeapps.up.railway.app'}/api/products`, {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://expressjs-postgres-production-6aba.up.railway.app'}/api/products`, {
           method: "POST",
           headers: {
             'Authorization': `Bearer ${token}`
@@ -1027,7 +1027,7 @@ export default function ProductList() {
       setError("");
       try {
         const authToken = token;
-        const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://pashahomeapps.up.railway.app'}/api/products/${id}`, {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://expressjs-postgres-production-6aba.up.railway.app'}/api/products/${id}`, {
           headers: {
             'Authorization': `Bearer ${token}`
           }
@@ -1806,7 +1806,7 @@ export default function ProductList() {
           fd.append('productImage', form.productImage);
         }
         
-        const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://pashahomeapps.up.railway.app'}/api/products/${product.productId}`, {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://expressjs-postgres-production-6aba.up.railway.app'}/api/products/${product.productId}`, {
           method: "PUT",
           headers: {
             'Authorization': `Bearer ${token}`
@@ -1836,7 +1836,7 @@ export default function ProductList() {
       
       try {
         const authToken = token;
-        const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://pashahomeapps.up.railway.app'}/api/products/${product.productId}`, {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://expressjs-postgres-production-6aba.up.railway.app'}/api/products/${product.productId}`, {
           method: "DELETE",
           headers: {
             'Authorization': `Bearer ${token}`

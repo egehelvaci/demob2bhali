@@ -320,7 +320,7 @@ const MuhasebePage = () => {
       }
 
       // API URL'i oluştur - mağaza seçiliyse mağaza bazlı endpoint kullan
-      let apiUrl = `${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://pashahomeapps.up.railway.app'}`;
+      let apiUrl = `${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://expressjs-postgres-production-6aba.up.railway.app'}`;
 
       // storeId parametresi varsa onu kullan, yoksa state'den al
       const targetStoreId = storeId || selectedStoreFilter;
@@ -426,7 +426,7 @@ const MuhasebePage = () => {
       }
 
       // USD API URL'i oluştur
-      let apiUrl = `${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://pashahomeapps.up.railway.app'}`;
+      let apiUrl = `${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://expressjs-postgres-production-6aba.up.railway.app'}`;
 
       // storeId parametresi varsa onu kullan, yoksa state'den al
       const targetStoreId = storeId || selectedStoreFilter;
@@ -533,7 +533,7 @@ const MuhasebePage = () => {
       const authToken = token;
       if (!authToken) return;
 
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://pashahomeapps.up.railway.app'}/api/admin/usd-muhasebe/income-types`, {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://expressjs-postgres-production-6aba.up.railway.app'}/api/admin/usd-muhasebe/income-types`, {
         headers: {
           'Authorization': `Bearer ${authToken}`,
           'Content-Type': 'application/json'
@@ -557,7 +557,7 @@ const MuhasebePage = () => {
       const authToken = token;
       if (!authToken) return;
 
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://pashahomeapps.up.railway.app'}/api/admin/usd-muhasebe/expense-types`, {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://expressjs-postgres-production-6aba.up.railway.app'}/api/admin/usd-muhasebe/expense-types`, {
         headers: {
           'Authorization': `Bearer ${authToken}`,
           'Content-Type': 'application/json'
@@ -622,7 +622,7 @@ const MuhasebePage = () => {
       const authToken = token;
       if (!authToken) return;
 
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://pashahomeapps.up.railway.app'}/api/admin/muhasebe/income-types`, {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://expressjs-postgres-production-6aba.up.railway.app'}/api/admin/muhasebe/income-types`, {
         headers: {
           'Authorization': `Bearer ${authToken}`,
           'Content-Type': 'application/json'
@@ -646,7 +646,7 @@ const MuhasebePage = () => {
       const authToken = token;
       if (!authToken) return;
 
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://pashahomeapps.up.railway.app'}/api/admin/muhasebe/expense-types`, {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://expressjs-postgres-production-6aba.up.railway.app'}/api/admin/muhasebe/expense-types`, {
         headers: {
           'Authorization': `Bearer ${authToken}`,
           'Content-Type': 'application/json'
@@ -839,7 +839,7 @@ const MuhasebePage = () => {
         ? '/api/admin/usd-muhasebe/hareketler'
         : '/api/admin/muhasebe-hareketleri';
 
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://pashahomeapps.up.railway.app'}${apiEndpoint}`, {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL || 'https://expressjs-postgres-production-6aba.up.railway.app'}${apiEndpoint}`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${authToken}`,

@@ -55,7 +55,7 @@ export default function Login() {
         setImageLoading(true);
         setBackgroundImage(""); // Görseli temizle
         
-        const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL || "https://pashahomeapps.up.railway.app"}/api/login-assets/random`);
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL || "https://expressjs-postgres-production-6aba.up.railway.app"}/api/login-assets/random`);
         const data = await response.json();
         
         if (data.success && data.data.imageUrl) {
